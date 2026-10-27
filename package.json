@@ -1,0 +1,28 @@
+{
+  "name": "release-notes-writer",
+  "version": "1.0.0",
+  "description": "An AI pipeline that turns the week's completed Linear issues into release notes a customer can actually read: internal-only issues filtered out in code, the rest grouped into themes by Claude, every cited issue identifier checked against the real batch, and the result created as a draft page in Notion for a human to edit before anything goes out. Built on One.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "tsx src/check.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/*.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
+    "@withone/sdk": "^0.4.0",
+    "dotenv": "^16.4.5",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3"
+  },
+  "license": "MIT"
+}

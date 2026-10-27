@@ -1,0 +1,123 @@
+[
+  {
+    "id": "a1b2c301",
+    "identifier": "ENG-401",
+    "title": "CSV export times out on large date ranges",
+    "description": "Exporting more than about 90 days of jobs returned a 504 instead of a file. Exports now stream row by row instead of building the whole file in memory first, so there's no longer a size where it just fails.",
+    "url": "https://linear.app/harborfleet/issue/ENG-401",
+    "completed_at": "2026-10-21T14:12:00.000Z",
+    "state_name": "Done",
+    "assignee": "Priya Anand",
+    "labels": []
+  },
+  {
+    "id": "a1b2c302",
+    "identifier": "ENG-402",
+    "title": "Migrate dispatch service to the new queue library",
+    "description": "Swaps the internal job queue under the dispatch service from the old library to the new one. No behavior change for anyone using the product; this is groundwork for the batched reassignment work.",
+    "url": "https://linear.app/harborfleet/issue/ENG-402",
+    "completed_at": "2026-10-22T10:00:00.000Z",
+    "state_name": "Done",
+    "assignee": "Owen Park",
+    "labels": ["refactor"]
+  },
+  {
+    "id": "a1b2c303",
+    "identifier": "ENG-403",
+    "title": "Add contract test for the billing webhook",
+    "description": "New test suite asserting the billing webhook payload shape matches what the invoicing service expects, so a schema drift fails CI instead of production.",
+    "url": "https://linear.app/harborfleet/issue/ENG-403",
+    "completed_at": "2026-10-22T16:30:00.000Z",
+    "state_name": "Done",
+    "assignee": "Dana Okafor",
+    "labels": ["test"]
+  },
+  {
+    "id": "a1b2c304",
+    "identifier": "ENG-404",
+    "title": "Add bulk reassign for driver routes",
+    "description": "Dispatchers could only move one stop to another driver at a time. You can now select multiple stops on the board and reassign them to a different driver in a single action.",
+    "url": "https://linear.app/harborfleet/issue/ENG-404",
+    "completed_at": "2026-10-23T09:45:00.000Z",
+    "state_name": "Done",
+    "assignee": "Priya Anand",
+    "labels": []
+  },
+  {
+    "id": "a1b2c305",
+    "identifier": "ENG-407",
+    "title": "Route map redraws on every keystroke in the search box",
+    "description": "Typing in the stop search field was re-rendering the whole route map on every character, which made the board feel laggy with more than about 50 stops on screen. The map now only redraws once you pause typing.",
+    "url": "https://linear.app/harborfleet/issue/ENG-407",
+    "completed_at": "2026-10-23T15:10:00.000Z",
+    "state_name": "Done",
+    "assignee": "Tom Lindqvist",
+    "labels": []
+  },
+  {
+    "id": "a1b2c306",
+    "identifier": "ENG-409",
+    "title": "Bump the CI runner image",
+    "description": "Updates the CI runner to the newer base image so builds pick up current OS security patches. No product change.",
+    "url": "https://linear.app/harborfleet/issue/ENG-409",
+    "completed_at": "2026-10-24T08:00:00.000Z",
+    "state_name": "Done",
+    "assignee": "Owen Park",
+    "labels": ["ci"]
+  },
+  {
+    "id": "a1b2c307",
+    "identifier": "ENG-410",
+    "title": "Customer portal shows the wrong ETA after a reroute",
+    "description": "When a dispatcher manually edited a driver's route, the customer-facing tracking page kept showing the original ETA instead of recalculating from the new stop order. It now recalculates as soon as the route changes.",
+    "url": "https://linear.app/harborfleet/issue/ENG-410",
+    "completed_at": "2026-10-24T13:20:00.000Z",
+    "state_name": "Done",
+    "assignee": "Grace Ahn",
+    "labels": []
+  },
+  {
+    "id": "a1b2c308",
+    "identifier": "ENG-412",
+    "title": "Add dark mode to the dispatch board",
+    "description": "The dispatch board now follows a dark theme, toggleable from the board's own settings menu, for dispatchers running it on a wall monitor overnight.",
+    "url": "https://linear.app/harborfleet/issue/ENG-412",
+    "completed_at": "2026-10-25T11:00:00.000Z",
+    "state_name": "Done",
+    "assignee": "Tom Lindqvist",
+    "labels": []
+  },
+  {
+    "id": "a1b2c309",
+    "identifier": "ENG-413",
+    "title": "Rewrite the internal onboarding doc for new hires",
+    "description": "Updates the engineering onboarding doc to match the current repo layout. Internal only.",
+    "url": "https://linear.app/harborfleet/issue/ENG-413",
+    "completed_at": "2026-10-25T17:45:00.000Z",
+    "state_name": "Done",
+    "assignee": "Dana Okafor",
+    "labels": ["docs-internal"]
+  },
+  {
+    "id": "a1b2c310",
+    "identifier": "ENG-415",
+    "title": "Driver app crashes on photo upload over 8MB",
+    "description": "Proof-of-delivery photos taken on newer phone cameras occasionally exceeded 8MB and crashed the upload screen. Photos are now resized on the device before upload, so this can no longer happen regardless of camera resolution.",
+    "url": "https://linear.app/harborfleet/issue/ENG-415",
+    "completed_at": "2026-10-26T10:15:00.000Z",
+    "state_name": "Done",
+    "assignee": "Grace Ahn",
+    "labels": []
+  },
+  {
+    "id": "a1b2c311",
+    "identifier": "ENG-399",
+    "title": "Weekly summary email double-counts canceled stops",
+    "description": "The Monday summary email counted a stop twice if it was canceled and then rescheduled within the same week. Fixed so each stop counts once regardless of how many times it moved.",
+    "url": "https://linear.app/harborfleet/issue/ENG-399",
+    "completed_at": "2026-10-26T18:00:00.000Z",
+    "state_name": "Done",
+    "assignee": "Priya Anand",
+    "labels": []
+  }
+]

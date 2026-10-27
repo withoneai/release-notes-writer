@@ -1,0 +1,25 @@
+{
+  "intro": "Six changes this week, three fixes and three improvements, mostly around exports, the dispatch board, and delivery tracking.",
+  "themes": [
+    {
+      "heading": "CSV exports no longer time out",
+      "summary": "Exporting a large date range of jobs used to fail outright once it passed roughly 90 days. The export now streams the file instead of building it all at once, so there is no longer a range size where it just stops working.",
+      "issueIdentifiers": ["ENG-401"]
+    },
+    {
+      "heading": "Reassign routes to another driver in one step",
+      "summary": "You can now select several stops on the dispatch board at once and move them all to a different driver in a single action, instead of reassigning one stop at a time.",
+      "issueIdentifiers": ["ENG-404"]
+    },
+    {
+      "heading": "A smoother, darker dispatch board",
+      "summary": "The board's route map no longer redraws on every keystroke while you search for a stop, so it stays responsive even with dozens of stops on screen. A new dark mode, toggleable from the board's settings menu, makes it easier on the eyes for teams running it on a wall monitor overnight.",
+      "issueIdentifiers": ["ENG-407", "ENG-412"]
+    },
+    {
+      "heading": "More reliable delivery tracking and proof of delivery",
+      "summary": "The customer tracking page now recalculates the ETA as soon as a dispatcher edits a route, instead of showing the original estimate. On the driver side, proof-of-delivery photos are resized on the device before upload, which fixes crashes that happened when a newer phone's camera produced a photo larger than the app could handle.",
+      "issueIdentifiers": ["ENG-410", "ENG-415"]
+    }
+  ]
+}
